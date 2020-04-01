@@ -4,8 +4,11 @@ $(document).ready(function () {
 
     $ul.click(function(e){
         let $elemento = $(e.target);
-     if($elemento.parent().hasClass("-left")){
-            carouselLeft();
+        if($elemento.parent().hasClass("-left")){
+             carouselLeft();
+     }
+         else if($elemento.parent().hasClass("-right")){
+                carouselRight();
      }
     });
 
@@ -16,10 +19,13 @@ $(document).ready(function () {
         let $right = $(".-right");
 
         let id = parseInt($left.attr('data-id'));
-        
-        const nexId = id == 0 ? 14 : id - 1 ;
-
-        
+        let nexId;
+        if(id==0){
+            nexId = 14;
+        }
+        else{
+            nexId = id-1;
+        }
 
         $left.removeClass("-left");
         $center.removeClass("-center");
@@ -28,12 +34,34 @@ $(document).ready(function () {
         $left.addClass("-center");
         $center.addClass("-right");
 
-        $center = $left;
-        $right = $right;
-        $left = $(`[data-id="${nexId}"]`);
 
+        $left = $(`[data-id=${nexId}]`);
         $left.addClass("-left");
-
-
     }
+    function carouselRight(){
+        let $left = $(".-left");
+        let $center = $(".-center");
+        let $right = $(".-right");
+
+        let id = parseInt($right.attr('data-id'));
+        let nextId;
+            if(id==14){
+                nextId = 0;
+            }else{
+                nextId = id + 1;
+            }
+
+
+        $left.removeClass("-left");
+        $center.removeClass("-center");
+        $right.removeClass("-right");
+
+        $right.addClass("-center");
+        $center.addClass("-left");
+
+        $right = $(`[data-id=${nextId}]`);
+        $right.addClass("-right");
+    }
+
+
 });

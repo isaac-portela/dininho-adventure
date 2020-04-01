@@ -12,10 +12,11 @@
 
 }
 .key-gif.-active{
-    z-index: 2;
+    z-index: 3;
     opacity: 1;
 }
 .key-gif::after{
+    position: absolute;
     content: '';
     background-image: url("/imagens/interrogachave1.png");
     width: 80px;
