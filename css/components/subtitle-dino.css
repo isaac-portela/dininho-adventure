@@ -1,0 +1,13 @@
+.sub-title-dino{
+    font-weight: normal;
+     font-size: 26px;
+     font-family: 'Bungee', cursive;
+     line-height: 26px;
+     margin-bottom: var(--gap-medium);
+ }
+
+ @media(min-width:600px){
+    .sub-title-dino{
+        font-size: 48px;
+    }
+}

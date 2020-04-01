@@ -1,0 +1,17 @@
+:root{
+    --gap-very-small:8px;
+    --gap-smaller:10px;
+    --gap-small:16px;
+    --gap-medium:20px;
+    --gab-big:50px;
+}
+@media(min-width:600px){
+    :root{
+        --gap-very-small: 12px;
+        --gap-smaller:16px;
+        --gap-small:20px;
+        --gap-medium: 40px;
+        --gab-big:70px;
+    }
+
+}
