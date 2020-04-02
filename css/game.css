@@ -1,3 +1,4 @@
 @import '/css/reset.css';
-
+@import '/css/settings/colors.css';
 @import '/css/components/game-dino.css';
+
