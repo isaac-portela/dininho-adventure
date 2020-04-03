@@ -1,3 +1,4 @@
+'use strict';
 function Sky(contexto, screen) {
     const sky = new Image();
     sky.src = "/imagens/game/ceu.png";

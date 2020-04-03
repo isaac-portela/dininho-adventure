@@ -1,8 +1,9 @@
+'use strict';
  function Floor(contexto , screen) {
 
      const floor = new Image();
      floor.src = "/imagens/game/chao.png";
-     
+
     function draw(){
      floor.addEventListener('load', function () {
          contexto.drawImage(floor, 0, screen.height - floor.height);
@@ -10,6 +11,7 @@
      });
     }
     return{
-        draw
+        draw,
+        height: floor.height
     }
  }
