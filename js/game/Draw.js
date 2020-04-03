@@ -1,10 +1,18 @@
 'use strict';
-function Draw(contexto ,screen){
-    const sky = new Sky(contexto,screen); 
-    const floor = new Floor(contexto, screen);
-    const dininho = new Dininho(contexto,screen,floor.height);
-        
-        sky.draw();   
+
+function Draw() {
+    const {contexto , screen , dininho , sky , floor} =  global;
+
+    if (!global.start) {
+        sky.draw();
         floor.draw();
         dininho.draw();
+
+     global.start = true;
+    }else{
+       contexto.clearRect(0 , 0 , screen.width , screen.height);
+        sky.update();
+        floor.update();
+        dininho.update();
+    }
 }

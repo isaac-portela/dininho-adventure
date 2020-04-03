@@ -1,5 +1,5 @@
 'use strict';
-function Sky(contexto, screen) {
+function Sky(contexto,screen) {
     const sky = new Image();
     sky.src = "/imagens/game/ceu.png";
 
@@ -9,8 +9,14 @@ function Sky(contexto, screen) {
             contexto.drawImage(sky, center(), 0);
         });
     }
+
+    function update(){
+        contexto.drawImage(sky, center(), 0);
+    }
+
     return {
-        draw
+        draw,
+        update
     }
 
 }

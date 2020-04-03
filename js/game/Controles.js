@@ -1,9 +1,10 @@
 'use strict';
 
-function Controles($canvas) {
-    win.addEventListener('keyup',function({key}){
+function Controles() {
+    const {dininho}  = global
+    window.addEventListener('keydown',function({key}){
         if(key.toLowerCase()== 'a'){
-            dininho.moveLeft();
+           dininho.moveLeft();
 
         }
        if(key.toLowerCase()=='d'){

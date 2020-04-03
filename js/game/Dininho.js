@@ -1,5 +1,6 @@
 'use strict';
-function Dininho(contexto, screen, floorHeight) {
+function Dininho(contexto,screen, floor) {
+
 
     const dininho = new Image();
     dininho.src = "/imagens/game/player/correndo/dininho_correndo_1.png";
@@ -7,7 +8,7 @@ function Dininho(contexto, screen, floorHeight) {
 
     const position = {
         x:428,
-        y: screen.height  - (floorHeight * 0.64) + dininho.height
+        y: screen.height  - (floor.height * 0.88) + dininho.height
     };
 
 
@@ -17,13 +18,21 @@ function Dininho(contexto, screen, floorHeight) {
 
         });
     }
+        function update(){
+            contexto.drawImage(dininho, position.x, position.y);
+        }
 
-    function update (){
-        position.x += 5;
-    }
+        function moveLeft(){
+            position.x -= 10;
+        }
+        function moveRight(){
+          position.x += 10;
+        }
 
     return {
         draw,
+        moveLeft,
+        moveRight,
         update
     }
 }
