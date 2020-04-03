@@ -18,10 +18,10 @@ function Dininho(contexto, screen, floorHeight) {
         });
     }
 
-    function update (deltaTime){
-        position.x += 5 / deltaTime;
+    function update (){
+        position.x += 5;
     }
-    
+
     return {
         draw,
         update
