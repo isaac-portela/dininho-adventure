@@ -1,4 +1,4 @@
-.key-gif{
+.key-gif {
     position: fixed;
     background-color: var(--color-dino);
     width: 100vw;
@@ -9,39 +9,40 @@
     align-items: center;
     opacity: 0;
     transition: opacity 200ms linear;
-
 }
-.key-gif.-active{
+
+.key-gif.-active {
     z-index: 3;
     opacity: 1;
 }
-.key-gif::after{
+
+.key-gif::after {
     position: absolute;
     content: '';
-    background-image: url("/imagens/interrogachave1.png");
+    background-image: url("../../imagens/interrogachave1.png");
     width: 80px;
     height: 160px;
     z-index: 0;
     animation: 600ms linear infinite easteregg;
 }
-@keyframes easteregg{
-    0%{
-        background-image: url("/imagens/interrogachave6.png");
-    }
-    20%{
-        background-image: url("/imagens/interrogachave5.png");
-    }
-    40%{
-        background-image: url("/imagens/interrogachave4.png");
-    }
-    60%{
-        background-image: url("/imagens/interrogachave3.png");
-    }
-    80%{
-        background-image: url("/imagens/interrogachave2.png");
-    }
-    100%{
-        background-image: url("/imagens/interrogachave1.png");
-    }
- }
 
+@keyframes easteregg {
+    0% {
+        background-image: url("../../imagens/interrogachave6.png");
+    }
+    20% {
+        background-image: url("../../imagens/interrogachave5.png");
+    }
+    40% {
+        background-image: url("../../imagens/interrogachave4.png");
+    }
+    60% {
+        background-image: url("../../imagens/interrogachave3.png");
+    }
+    80% {
+        background-image: url("../../imagens/interrogachave2.png");
+    }
+    100% {
+        background-image: url("../../imagens/interrogachave1.png");
+    }
+}
