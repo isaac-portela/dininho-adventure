@@ -1,7 +1,7 @@
 .separator-dino {
     --half-width-egg: 11px;
-    --half-width-eggs:30px;
-    background-image: url("/imagens/ovo1.png");
+    --half-width-eggs: 30px;
+    background-image: url("../../imagens/ovo1.png");
     background-size: auto 22px;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,40 +13,43 @@
     margin-bottom: var(--gap-medium);
     margin-top: var(--gap-medium);
 }
-.separator-dino.-all{
-    background-image: url("/imagens/ceto-de-ovos.png");
+
+.separator-dino.-all {
+    background-image: url("../../imagens/ceto-de-ovos.png");
     background-size: 60px auto;
     height: 58px;
 }
 
-.separator-dino::before, 
+.separator-dino::before,
 .separator-dino::after {
-    content: '' ;
+    content: '';
     width: calc(50% - var(--half-width-egg) - var( --gap-very-small));
     height: 4px;
     background-color: var(--color-fist);
 }
+
 .separator-dino.-all::before,
 .separator-dino.-all::after {
-    width: calc(50% - var(--half-width-eggs) -   var( --gap-very-small));   
+    width: calc(50% - var(--half-width-eggs) - var( --gap-very-small));
 }
-.separator-dino::before{
+
+.separator-dino::before {
     border-radius: 0 5px 5px 0;
 }
-.separator-dino::after{
+
+.separator-dino::after {
     border-radius: 5px 0 0 5px;
 }
 
-@media(min-width:600px){
-    .separator-dino{
+@media(min-width:600px) {
+    .separator-dino {
         --half-width-egg: 22px;
         --half-width-eggs: 35px;
         height: 44px;
         background-size: auto 44px;
     }
-    .separator-dino.-all{
+    .separator-dino.-all {
         background-size: 70px auto;
         height: 70px;
     }
-
 }
