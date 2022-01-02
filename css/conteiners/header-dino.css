@@ -4,7 +4,7 @@
     position: relative;
     min-height: 275px;
     height: 42%;
-    background: url("imagens/chao.png") bottom center/auto 180px repeat no-repeat, url("/imagens/montanhas1.png") bottom center/contain no-repeat, url("/imagens/montanhas2") bottom center/contain no-repeat, url("/imagens/ceu.png") top center/contain no-repeat var(--color-sky);
+    background: url("../imagens/chao.png") bottom center/auto 180px repeat no-repeat, url("/imagens/montanhas1.png") bottom center/contain no-repeat, url("/imagens/montanhas2") bottom center/contain no-repeat, url("/imagens/ceu.png") top center/contain no-repeat var(--color-sky);
 }
 
 .header-dino>.logo {
